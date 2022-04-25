@@ -151,10 +151,10 @@
       window.addEventListener('resize', this.getWidth)
 
       // Mouse and touch events
-      this.$refs.track.addEventListener('touchstart', this.handleMouseDown)
+      this.$refs.track.addEventListener('touchstart', this.handleMouseDown, { passive: true })
       this.$refs.track.addEventListener('touchend', this.handleMouseUp)
-      this.$refs.track.addEventListener('touchmove', this.handleMouseMove)
-      this.$refs.track.addEventListener('mousedown', this.handleMouseDown)
+      this.$refs.track.addEventListener('touchmove', this.handleMouseMove, { passive: true })
+      this.$refs.track.addEventListener('mousedown', this.handleMouseDown, { passive: true })
       this.$refs.track.addEventListener('mouseup', this.handleMouseUp)
       this.$refs.track.addEventListener('mousemove', this.handleMouseMove)
 
